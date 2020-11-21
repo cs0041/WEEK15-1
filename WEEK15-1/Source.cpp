@@ -19,6 +19,7 @@ int main()
     c = n;
     FindAllline(c, &i);
     int p = 64, w;
+    int ans[100];
     for (int k = 1; i >= k; k++)
     {
         w = 0;
@@ -30,7 +31,8 @@ int main()
             }
             for (p = p + 1; p <= 90; p++)
             {
-                printf("%c", p);
+                ans[p] = p;
+                printf("%c", ans[p]);
                 w++;
                 if (w == k)
                 {
@@ -57,7 +59,8 @@ int main()
                 e = g;
                 for (g = 64 + g; g >= 65; g--)
                 {
-                    printf("%c", g);
+                    ans[g] = g;
+                    printf("%c", ans[g]);
                     w++;
                     if (w == e)
                     {
@@ -73,7 +76,8 @@ int main()
             }
             for (int v = (p + k) - rb; v > p; v--)
             {
-                printf("%c", v);
+                ans[v] = v;
+                printf("%c", ans[v]);
                 w++;
                 if (w == k)
                 {
